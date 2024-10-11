@@ -1,5 +1,9 @@
-{% if title %}
-    <h1>{{ title }} here is your title</h1>
-{% else %}
-    <h1>No title</h1>
-{% endif %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Movies page{% endblock %}
+
+{% block body %}
+    {% for movie in movies %}
+        <li>{{movie}}</li>
+    {% endfor %}
+{% endblock %}
