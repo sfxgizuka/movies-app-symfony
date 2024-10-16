@@ -6,12 +6,9 @@
         Create Movie
     </h1>
     
-    <form 
-        action="/"
-        method="POST"
-        enctype="multipart/form-data">
+    {{ form_start(form) }}
 
-        <input 
+        {# <input 
             type="text"
             name="title"
             placeholder="Review Title..."
@@ -32,13 +29,13 @@
                     name="image"
                     class="hidden">
             </label>
-        </div>
-
+        </div> #}
+        {{ form_widget(form) }}
         <button    
             type="submit"
             class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
             Submit Post
         </button>
-    </form>
+    {{ form_end(form) }}
 </div>
 {% endblock %}
